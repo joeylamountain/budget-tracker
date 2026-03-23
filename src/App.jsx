@@ -84,7 +84,7 @@ ${list}`;
   try {
     const headers = { "Content-Type": "application/json" };
     if (apiKey) headers["x-api-key"] = apiKey;
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
+    const res = await fetch("/api/claude", {
       method: "POST",
       headers,
       body: JSON.stringify({
@@ -128,7 +128,7 @@ Give 4 sharp, specific, actionable insights to maximize savings. Be direct and s
   try {
     const headers = { "Content-Type": "application/json" };
     if (apiKey) headers["x-api-key"] = apiKey;
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
+    const res = await fetch("/api/claude", {
       method: "POST",
       headers,
       body: JSON.stringify({
